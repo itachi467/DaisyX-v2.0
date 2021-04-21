@@ -56,7 +56,7 @@ async def _(event):
         res = get(server)
         if "Wolfram Alpha did not understand" in res.text:
             await event.reply(
-                "Sorry, Daisy's AI systems could't recognized your question.."
+                "Sorry, Rias's AI systems could't recognized your question.."
             )
             return
         await event.reply(f"**{i}**\n\n" + res.text, parse_mode="markdown")

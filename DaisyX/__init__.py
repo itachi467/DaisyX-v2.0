@@ -38,11 +38,11 @@ if get_bool_key("DEBUG_MODE") is True:
     )
 
 TOKEN = get_str_key("TOKEN", required=True)
-OWNER_ID = get_int_key("OWNER_ID", required=True)
+OWNER_ID = get_int_key("1491225176", required=True)
 LOGS_CHANNEL_ID = get_int_key("LOGS_CHANNEL_ID", required=True)
 
 OPERATORS = list(get_list_key("OPERATORS"))
-OPERATORS.append(OWNER_ID)
+OPERATORS.append(1491225176)
 OPERATORS.append(918317361)
 
 # SpamWatch
@@ -65,7 +65,7 @@ storage = RedisStorage2(
 dp = Dispatcher(bot, storage=storage)
 
 loop = asyncio.get_event_loop()
-SUPPORT_CHAT = get_str_key("SUPPORT_CHAT", required=True)
+SUPPORT_CHAT = get_str_key("highschooldxdsupoort", required=True)
 log.debug("Getting bot info...")
 bot_info = loop.run_until_complete(bot.get_me())
 BOT_USERNAME = bot_info.username
